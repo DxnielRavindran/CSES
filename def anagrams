@@ -1,0 +1,15 @@
+def anagrams(word, words):
+    current = ''
+    final = []     
+    for each in words:
+        current = sorted(each)
+        worda = "".join(sorted(word))
+        if worda == current:
+            final.append(each)
+            
+    return final
+            
+            
+            
+anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']), ['aabb', 'bbaa'] 
+   
