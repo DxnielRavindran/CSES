@@ -1,8 +1,8 @@
 
-def Repetitions(n):
+def Repetitions(s):
     ans, temp = 1, 1
     # Traverse the string
-    for i in range(1, len(s)):
+    for i in range(1, len()):
          
         # If character is same as
         # previous increment temp value
