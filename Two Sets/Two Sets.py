@@ -1,9 +1,7 @@
 
-from doctest import master
-
 def TwoSets(n):
     nope = "NO"
-    yes = "YES"
+    boolean = ""
     master = []
     set = []
     answer = []
@@ -26,7 +24,7 @@ def TwoSets(n):
         count +=1  
 
     if sum%2 == 0:
-        answer.append(yes)    
+        boolean = "YES"  
         half = sum / 2
         reversed = master[::-1]
         sum = 0
@@ -43,16 +41,22 @@ def TwoSets(n):
         for each in set:
             if each in master:
                 master.remove(each)                
-        answer.append(len(set))
-        answer.append(set)
-        print(answer)
-
+        answer.append(len(master))
+        answer.append(master)
+        print(boolean)
+        print(len(set))
+        printlist(set)
+        print(" ")
+        print(len(master))
+        printlist(master)
     else:
         print(nope)
     
+def printlist(A):
+    for each in A:
+        print(each, end = ' ')
 
 
-TwoSets(7)
 
 
    
